@@ -1,7 +1,92 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+	version="3.0">
+	
+	<display-name>Evaluate.Me</display-name>
+	<welcome-file-list>
+	  <welcome-file>/security/login</welcome-file>
+	</welcome-file-list>
+	<listener>
+	   <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	 </listener>
+	 <listener>
+	   <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+	 </listener>
+	 <context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>
+			/META-INF/spring/root-context.xml
+			/WEB-INF/spring/appServlet/servlet-context.xml
+			/WEB-INF/spring-security.xml
+		</param-value>
+	 </context-param>
+	 <servlet>
+	   <servlet-name>appServlet</servlet-name>
+	   <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	   <init-param>
+	     <param-name>contextConfigLocation</param-name>
+	     <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+	   </init-param>
+	   <load-on-startup>1</load-on-startup>
+	 </servlet>
+	 <servlet-mapping>
+	   <servlet-name>appServlet</servlet-name>
+	   <url-pattern>/</url-pattern>
+	 </servlet-mapping>
+	 <resource-ref>
+	   <res-ref-name>jdbc/cops</res-ref-name>
+	   <res-type>javax.sql.DataSource</res-type>
+	   <res-auth>Container</res-auth>
+	   <res-sharing-scope>Shareable</res-sharing-scope>
+	 </resource-ref>
+	 <filter>
+	   <filter-name>springSecurityFilterChain</filter-name>
+	   <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	 </filter>
+	 <filter-mapping>
+	   <filter-name>springSecurityFilterChain</filter-name>
+	   <url-pattern>/*</url-pattern>
+	   <dispatcher>REQUEST</dispatcher>
+	   <dispatcher>FORWARD</dispatcher>
+	   <dispatcher>ERROR</dispatcher>
+	   <dispatcher>INCLUDE</dispatcher>
+	 </filter-mapping>
+	 <filter>
+	   <filter-name>sitemesh</filter-name>
+	   <filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	 </filter>
+	 <filter-mapping>
+	   <filter-name>sitemesh</filter-name>
+	   <url-pattern>/*</url-pattern>
+	   <dispatcher>REQUEST</dispatcher>
+	   <dispatcher>FORWARD</dispatcher>
+	 </filter-mapping>
+	 <jsp-config>
+	   <taglib>
+	     <taglib-uri>sitemesh-page</taglib-uri>
+	     <taglib-location>/WEB-INF/sitemesh-page.tld</taglib-location>
+	   </taglib>
+	   <taglib>
+	     <taglib-uri>sitemesh-decorator</taglib-uri>
+	     <taglib-location>/WEB-INF/sitemesh-decorator.tld</taglib-location>
+	   </taglib>
+	 </jsp-config>
+	<error-page>
+	  <error-code>404</error-code>
+	  <location>/security/notFound</location>
+	</error-page>
+	<error-page>
+	  <error-code>403</error-code>
+	  <location>/security/denied</location>
+	</error-page>
+	<error-page>
+	  <error-code>500</error-code>
+	  <location>/security/serverError</location>
+	</error-page>
+	<session-config>
+	  <session-timeout>20</session-timeout>
+	</session-config>
 </web-app>

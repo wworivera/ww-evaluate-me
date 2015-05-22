@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/views/">
+	
+	<!-- Excludes will never be decorated by Sitemesh. -->
+	<excludes>
+		<pattern>*security*</pattern>
+		<pattern>*session*</pattern>
+	</excludes>
+	
+	<decorator name="sitemesh" page="home.jsp">
+		<pattern>*admin*</pattern>
+		<pattern>*customer*</pattern>
+		<pattern>*questions*</pattern>
+	</decorator>
+</decorators>
