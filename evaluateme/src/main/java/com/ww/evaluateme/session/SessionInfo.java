@@ -5,10 +5,13 @@ import java.util.List;
 
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.ww.evaluateme.models.Summary;
+
 public class SessionInfo
 {
 	private UserDetails userDetails;
 	private Date birthdayDate;
+	private Summary summary;
 	
 	public UserDetails getUserDetails() {
 		return userDetails;
@@ -21,5 +24,13 @@ public class SessionInfo
     }
     public void setBirthdayDate(Date birthdayDate) {
         this.birthdayDate = birthdayDate;
+    }
+    
+    public void setSummary(Summary summary) {
+        this.summary = summary;
+    }
+    
+    public Summary getSummary() {
+        return summary;
     }
 }

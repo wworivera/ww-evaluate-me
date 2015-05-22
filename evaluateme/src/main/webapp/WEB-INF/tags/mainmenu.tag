@@ -21,6 +21,9 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul id="mainMenu" class="nav navbar-nav">
 <%-- 			<c:if test="${not empty orderInfo and (empty submitted or not submitted)}"> --%>
+				<li id="startPresentation" class="${fn:contains(url, 'presentation') ? 'active' : ''}">
+					<a href="<c:url value="/presentation/"/>" onclick="Pace.restart();" >Start Presentation: <s:message code="menu_title_customer"/></a>
+				</li>
 				<li id="errorsTab" class="${fn:contains(url, 'errors') ? 'active' : ''}">
 					<a href="<c:url value="/errors"/>">Errors</a>
 				</li>

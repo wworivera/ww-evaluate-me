@@ -11,5 +11,6 @@
 		<pattern>*admin*</pattern>
 		<pattern>*questions*</pattern>
 		<pattern>*user*</pattern>
+		<pattern>*presentation*</pattern>
 	</decorator>
 </decorators>
