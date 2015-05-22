@@ -4,73 +4,66 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags"%>
-
+<!-- custumer_summary-->
 
 <div class="panel panel-warning pull-right">
+<!-- 
 
+	private String presentationID;
+	private String presentationName;
+	private String presenterName;
+	private String company;
+	private String RTimeInterest; //promedio de los rates de las personas
+	private String startTime;
+	private String endTime;
+	private String evalTime; //to long, to short
+	private String topic;
+
+
+ -->
 
 	<div class="panel-heading">
-		<s:message code="custumer_summary_title" />
+		Nombre de la presentaciÃ³n
 	</div>
 	<div class="bs-example">
 		<div class="panel-group">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h6 class="panel-title">
-						<a data-toggle="collapse" href="#collapseOne">Información de
-							Cliente</a>
+						<a data-toggle="collapse" href="#collapseOne">Summary</a>
 					</h6>
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse in">
 
 					<ul class="list-group">
 						<li class="list-group-item list-group-item-success"><span
-							class="label label-default">General</span>
+							class="label label-default">Presentation Info</span>
 							<p>
 							<ul class="list-group">
 
-								<li class="list-group-item">Dish Conv. Id:21345</li>
-								<li class="list-group-item">Cops Id: 30579</li>
-								<li class="list-group-item">Nombre: INTRAWAY IPTV</li>
+								<li class="list-group-item">${summary.presentationName}</li>
+								<li class="list-group-item">${summary.presenterName}</li>
+								<li class="list-group-item">${summary.company}</li>
+								<li class="list-group-item">${summary.topic}</li>
 
 							</ul>
 
 							<p></li>
 						<li class="list-group-item list-group-item-success"><span
-							class="label label-default">Dirección Física</span>
+							class="label label-default">Otra Parte</span>
 							<p>
 							<ul class="list-group">
 
-								<li class="list-group-item">1110 MARBELLA CAL</li>
-								<li class="list-group-item">PR CAROLINA 00987 0000</li>
+								<li class="list-group-item">PArtes</li>
+								<li class="list-group-item">Partes</li>
 
 
 							</ul>
 
 							<p></li>
-						<li class="list-group-item list-group-item-success"><span
-							class="label label-default">Dirección de Facturación</span>
-							<p>
-							<ul class="list-group">
+						
 
-								<li class="list-group-item">PO Box 56 PO BOX 56</li>
-								<li class="list-group-item">Puerto Rico SAN JUAN 00902 0998</li>
-
-							</ul>
-
-							<p></li>
-
-						<li class="list-group-item list-group-item-success"><span
-							class="label label-default">Teléfonos</span>
-							<p>
-							<ul class="list-group">
-								<li class="list-group-item">Casa:7879388999</li>
-								<li class="list-group-item">Cel:7878987654</li>
-								<li class="list-group-item">Oficina:7879383499</li>
-
-							</ul>
-
-							<p></li>
+						
 					</ul>
 
 				</div>
@@ -78,7 +71,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapseTwo">Otra Información</a>
+						<a data-toggle="collapse" href="#collapseTwo">Feedback</a>
 					</h4>
 				</div>
 
@@ -88,7 +81,7 @@
 							class="label label-default">Info</span>
 							<p>
 							<ul class="list-group">
-								<li class="list-group-item">Tarjeta de Calificación:</li>
+								<li class="list-group-item">Tarjeta de CalificaciÃ³n:</li>
 								<li class="list-group-item">Nombre:</li>
 								<li class="list-group-item">Cita de Llegada</li>
 
@@ -99,10 +92,10 @@
 
 				</div>
 			</div>
-			<div class="panel panel-default">
+			<%-- <div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapseThree">Precios</a>
+						<a data-toggle="collapse" href="#collapseThree">CategorÃ­a</a>
 					</h4>
 				</div>
 				<div id="collapseThree" class="panel-collapse collapse">
@@ -112,18 +105,19 @@
 							class="label label-default">$</span>
 							<p>
 							<ul class="list-group">
-								<li class="list-group-item">Cargos Mensuales:10000</li>
-								<li class="list-group-item">Ahorros Mensuales:2344</li>
-								<li class="list-group-item">Otros Cargos: 13443</li>
+								<li class="list-group-item">info1</li>
+								<li class="list-group-item">info2</li>
+								<li class="list-group-item">info3</li>
 
 							</ul>
 							<p></li>
 					</ul>
 
 				</div>
-			</div>
+			</div> --%>
 		</div>
 	</div>
 
 	<div class="panel-footer">Panel footer</div>
 </div>
+
