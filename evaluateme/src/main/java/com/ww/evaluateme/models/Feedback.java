@@ -1,11 +1,19 @@
 package com.ww.evaluateme.models;
 
+import java.util.ArrayList;
+
+import com.ww.evaluateme.session.SessionInfo;
+import com.ww.evaluateme.session.SessionUtils;
+
 public class Feedback {
 	
 	private int id;
 	private String question;
 	private int rate;
 	private String currentTopic;
+    protected Double avg = 0.0;
+    
+	protected ArrayList<Integer> feedbackList = new ArrayList<Integer>();
 	
 	public int getId() {
 		return id;
@@ -30,6 +38,32 @@ public class Feedback {
 	}
 	public void setCurrentTopic(String currentTopic) {
 		this.currentTopic = currentTopic;
+	}
+	
+	
+	public SessionInfo avgFeedback(int newFeedback, SessionInfo sessionInfo) {
+		
+		
+		
+		Double sumValues = 0.0;
+		
+		feedbackList = sessionInfo.getFeedbackList();
+		
+		feedbackList.add(newFeedback);
+		
+		for(int i = 0;i<feedbackList.size();i++) {
+			
+			sumValues+=feedbackList.get(i);
+			
+		}
+		
+		avg = sumValues/feedbackList.size();
+		
+		
+		sessionInfo.setAvgFeedback(avg);
+		sessionInfo.setFeedbackList(feedbackList);
+		
+		return sessionInfo;
 	}
 	
 	
