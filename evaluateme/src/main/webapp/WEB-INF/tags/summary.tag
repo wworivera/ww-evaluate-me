@@ -23,7 +23,7 @@
  -->
 
 	<div class="panel-heading">
-		Nombre de la presentación
+		${summary.presentationName}
 	</div>
 	<div class="bs-example">
 		<div class="panel-group">
@@ -42,21 +42,20 @@
 							<ul class="list-group">
 
 								<li class="list-group-item">${summary.presentationName}</li>
-								<li class="list-group-item">${summary.presenterName}</li>
-								<li class="list-group-item">${summary.company}</li>
-								<li class="list-group-item">${summary.topic}</li>
+								<li class="list-group-item">By:${summary.presenterName}</li>
+								<li class="list-group-item">Company:${summary.company}</li>
+								<li class="list-group-item">Current Topic:${summary.topic}</li>
 
 							</ul>
 
 							<p></li>
 						<li class="list-group-item list-group-item-success"><span
-							class="label label-default">Otra Parte</span>
+							class="label label-default">Live Feedback</span>
 							<p>
 							<ul class="list-group">
-
-								<li class="list-group-item">PArtes</li>
-								<li class="list-group-item">Partes</li>
-
+								
+								<li class="list-group-item">Average Feedback:${summary.RTimeInterest}</li>
+							
 
 							</ul>
 
@@ -68,6 +67,16 @@
 
 				</div>
 			</div>
+			
+			<!--  
+				
+				private int id;
+	private String question;
+	private int rate;
+	private String currentTopic;
+			
+			
+			-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
@@ -78,12 +87,13 @@
 				<div id="collapseTwo" class="panel-collapse collapse">
 					<ul class="list-group">
 						<li class="list-group-item list-group-item-success"><span
-							class="label label-default">Info</span>
+							class="label label-default">Evaluate</span>
 							<p>
 							<ul class="list-group">
 								<li class="list-group-item">Tarjeta de Calificación:</li>
 								<li class="list-group-item">Nombre:</li>
 								<li class="list-group-item">Cita de Llegada</li>
+								
 
 							</ul>
 
