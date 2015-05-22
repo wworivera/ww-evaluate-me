@@ -44,7 +44,7 @@
 								<li class="list-group-item">${summary.presentationName}</li>
 								<li class="list-group-item">By:${summary.presenterName}</li>
 								<li class="list-group-item">Company:${summary.company}</li>
-								<li class="list-group-item">Current Topic:${summary.topic}</li>
+								<%-- <li class="list-group-item">Current Topic:${summary.topic}</li> --%>
 
 							</ul>
 
@@ -54,7 +54,7 @@
 							<p>
 							<ul class="list-group">
 								
-								<li class="list-group-item">Average Feedback:${summary.RTimeInterest}</li>
+								<li class="list-group-item">Average Feedback:${feedback.RTimeInterest}</li>
 							
 
 							</ul>
