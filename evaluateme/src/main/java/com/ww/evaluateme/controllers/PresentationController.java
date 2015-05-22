@@ -47,6 +47,7 @@ public class PresentationController {
 			customSumm.setCompany("Wovenware");
 			customSumm.setPresentationName("Evaluate.Me");
 			customSumm.setPresenterName("Luis Soto");
+			customSumm.setRTimeInterest("4.5");
 			//customSumm.setTopic("Our New Project");
 			
 			
