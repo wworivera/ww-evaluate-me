@@ -5,7 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="java-output-path" value="/evaluateme/target/classes"/>
-        <property name="context-root" value="Evaluate.Me"/>
+        <property name="context-root" value="EvaluateMe"/>
         <property name="component.exclusion.patterns" value="**/*.java,pom.xml,.project,.settings/**,target/**"/>
     </wb-module>
 </project-modules>

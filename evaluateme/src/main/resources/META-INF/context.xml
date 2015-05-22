@@ -1,0 +1,18 @@
+<!-- The contents of this file will be loaded for each web application -->
+<Context path="/EvaluateMe" docBase="EvaluateMe" reloadable="true">
+	<!-- COPS -->
+<!-- 	<Resource 
+		name="${context.db.cops.name}" 
+		auth="${context.db.cops.auth}" 
+        type="${context.db.cops.type}" 
+		username="${context.db.cops.username}" 
+		password="${context.db.cops.password}" 
+        driverClassName="${context.db.cops.driverClassName}" 
+		url="${context.db.cops.url}" 
+        maxActive="${context.db.cops.maxActive}" 
+		maxIdle="${context.db.cops.maxIdle}" 
+		removeAbandoned="${context.db.cops.removeAbandoned}" 
+		removeAbandonedTimeout="${context.db.cops.removeAbandonedTimeout}" 
+		logAbandoned="${context.db.cops.logAbandoned}" 
+	/> -->
+</Context>
