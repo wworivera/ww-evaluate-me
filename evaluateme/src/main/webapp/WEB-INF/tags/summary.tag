@@ -68,15 +68,6 @@
 				</div>
 			</div>
 			
-			<!--  
-				
-				private int id;
-	private String question;
-	private int rate;
-	private String currentTopic;
-			
-			
-			-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
@@ -90,14 +81,14 @@
 							class="label label-default">Evaluate</span>
 							<p>
 							<ul class="list-group">
-								<li class="list-group-item">Tarjeta de Calificación:</li>
-								<li class="list-group-item">Nombre:</li>
-								<li class="list-group-item">Cita de Llegada</li>
+								<li class="list-group-item">Topic:Current Topic:${summary.topic}</li>
+								<li class="list-group-item"><select class="form-control"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select><button type="button" class="btn btn-primary btn-sm">Submit</button></li>
 								
 
 							</ul>
 
-							<p></li>
+							<p>
+							</li>
 					</ul>
 
 				</div>
@@ -106,6 +97,6 @@
 		</div>
 	</div>
 
-	<div class="panel-footer">Panel footer</div>
+	<!-- <div class="panel-footer">Panel footer</div> -->
 </div>
 

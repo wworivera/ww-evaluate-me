@@ -14,6 +14,7 @@ public class Feedback {
     protected Double avg = 0.0;
     
 	protected ArrayList<Integer> feedbackList = new ArrayList<Integer>();
+	protected ArrayList<Feedback> feedbackModel = new ArrayList<Feedback>();
 	
 	public int getId() {
 		return id;
@@ -62,6 +63,7 @@ public class Feedback {
 		
 		sessionInfo.setAvgFeedback(avg);
 		sessionInfo.setFeedbackList(feedbackList);
+		
 		
 		return sessionInfo;
 	}

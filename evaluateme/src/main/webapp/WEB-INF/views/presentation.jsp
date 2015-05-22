@@ -23,7 +23,7 @@
  				<div class="row">
  				<div class="col-xs-6 col-sm-6 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
  					
- 				 PAGINA PRINCIPAL<input type="submit" value = "Submit" /> 
+ 				
  				</div>
  				<div>
  					<t:summary />
