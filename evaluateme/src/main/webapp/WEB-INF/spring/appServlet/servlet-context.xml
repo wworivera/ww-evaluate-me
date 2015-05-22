@@ -30,10 +30,8 @@
 	<mvc:annotation-driven />
 	<tx:annotation-driven transaction-manager="txManager"/>
 	<mvc:view-controller path="/" view-name="redirect:security/login" />
-<!-- <mvc:annotation-driven ignoreDefaultModelOnRedirect="true" /> -->
 	<context:component-scan base-package="com.ww.evaluateme" />
 	
-<!-- 	<mvc:annotation-driven ignoreDefaultModelOnRedirect="true" /> -->
 	<mvc:resources mapping="/resources/**" location="/" />
 	<mvc:resources mapping="/webapp/**" location="/WEB-INF" />
 	<mvc:resources mapping="/**" location="/WEB-INF/views/" />
@@ -48,72 +46,32 @@
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" id="localeChangeInterceptor">
             <property name="paramName" value="lang"/>
         </bean>
-<!--         <bean id="authenticationInterceptor" class="com.claropr.pymes.security.AuthenticationInterceptor" /> -->
         <bean class="org.springframework.web.servlet.mvc.WebContentInterceptor">
         	<property name="cacheSeconds" value="0"/>
         	<property name="useExpiresHeader" value="true"/>
         	<property name="useCacheControlHeader" value="true"/>
         	<property name="useCacheControlNoStore" value="true"/>
     	</bean>
-<!--         <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" id="isAuthInterceptor"> -->
-<!--  	 		<property name="interceptors"> -->
-<!--   				<list> -->
-<!--   					<ref bean="authenticationInterceptor" /> -->
-<!--   				</list> -->
-<!--   			</property> -->
-<!--  		</bean> -->
     </mvc:interceptors>
-<!--  <bean id="authenticationInterceptor" class="com.claropr.identityportal.security.AuthenticationInterceptor" /> -->
-
-<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-    <property name="exceptionMappings">
-        <props>
-            <prop key="org.springframework.security.AccessDeniedException">/security/denied</prop>
-            <prop key="org.springframework.orm.hibernate3.HibernateOptimisticLockingFailureException">/security/denied</prop>
-        </props>
-    </property>
-    <property name="order" value="0"/>
-</bean>
-
-<!-- <bean class="package.to.your.handler.DefaultExceptionResolver"> -->
-<!--     <property name="order" value="1"/> -->
-<!-- </bean> -->
-
+    
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+	    <property name="exceptionMappings">
+	        <props>
+	            <prop key="org.springframework.security.AccessDeniedException">/security/denied</prop>
+	            <prop key="org.springframework.orm.hibernate3.HibernateOptimisticLockingFailureException">/security/denied</prop>
+	        </props>
+	    </property>
+	    <property name="order" value="0"/>
+	</bean>
+	
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
         <property name="defaultLocale" value="en"/>
     </bean>
-
-<!--  <bean class="org.springframework.web.servlet.handler.HandlerInterceptorAdapter"/> -->
-
+    
 	<!-- View Resolver -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
- 	<!-- Session Manager --> 
-<!-- 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
-        <property name="hibernateProperties">
-            <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
-                <prop key="hibernate.show_sql">true</prop>
-            </props>
-        </property>
-    </bean> -->
-    
-<!--     Transaction Manager -->
-<!-- 	<bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean> -->
-	
-<!-- 	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
-	    <property name="cacheManager" ref="ehcache"/>
-	</bean>
-	<bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
-	    <property name="configLocation" value="/WEB-INF/spring/ehcache.xml"/>
-	    <property name="shared" value="true"/>
-	</bean> -->
-
 </beans>

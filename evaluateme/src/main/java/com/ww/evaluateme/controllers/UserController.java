@@ -21,8 +21,8 @@ import com.ww.evaluateme.utils.exceptions.EvaluateMeGlobalException;
  */
 //@PreAuthorize("isAuthenticated()")
 @Controller
-@RequestMapping("/admin")
-public class AdminController {
+@RequestMapping("/user")
+public class UserController {
 	
 //	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -53,6 +53,6 @@ public class AdminController {
 //			e1.printStackTrace();
 //		}
 		
-		return "admin";
+		return "user/main";
 	}
 }

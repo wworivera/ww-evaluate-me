@@ -21,20 +21,11 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul id="mainMenu" class="nav navbar-nav">
 <%-- 			<c:if test="${not empty orderInfo and (empty submitted or not submitted)}"> --%>
-				<li id="customerTab" class="${fn:contains(url, 'customer') ? 'active' : ''}">
-					<a href="<c:url value="/customer"/>" onclick="Pace.restart();" ><s:message code="menu_title_customer"/></a>
-				</li>
 				<li id="errorsTab" class="${fn:contains(url, 'errors') ? 'active' : ''}">
 					<a href="<c:url value="/errors"/>">Errors</a>
 				</li>
-				<li id="customerValidatedTab" class="${fn:contains(url, 'validated') ? 'active' : ''}">
-					<a href="<c:url value="/customer/validated"/>" onclick="Pace.restart();" ><s:message code="menu_title_customer"/> Validated</a>
-				</li>
-				<li id="customerFailedTab" class="${fn:contains(url, 'failed') ? 'active' : ''}">
-					<a href="<c:url value="/customer/failed"/>" onclick="Pace.restart();" ><s:message code="menu_title_customer"/> Failed</a>
-				</li>
-				<li id="customerPendingTab" class="${fn:contains(url, 'pending') ? 'active' : ''}">
-					<a href="<c:url value="/customer/pending"/>" onclick="Pace.restart();" ><s:message code="menu_title_customer"/> Pending</a>
+				<li id="userTab" class="${fn:contains(url, 'user') ? 'active' : ''}">
+					<a href="<c:url value="/user"/>" onclick="Pace.restart();" ><s:message code="menu_title_customer"/> User</a>
 				</li>
 <%-- 				<li id="productTab" class="${fn:contains(url, 'products') ? 'active' : ''}"> --%>
 <%-- 					<a href="<c:url value="/products"/>"><s:message code="menu_title_products"/></a> --%>

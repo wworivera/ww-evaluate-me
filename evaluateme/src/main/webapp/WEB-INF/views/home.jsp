@@ -29,7 +29,7 @@
 		<script src="${context}/resources/js/bootstrap-session-timeout.js"></script>
 		<script src="${context}/js/home.js"></script>
 		<script src="${context}/js/session.js"></script>
-	    <title>Customer Identity Validation System</title>
+	    <title>Evaluate.Me</title>
 	</head>
 	<body>
 		<t:topmenu/>

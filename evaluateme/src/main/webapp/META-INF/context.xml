@@ -1,18 +1,18 @@
 <!-- The contents of this file will be loaded for each web application -->
 <Context path="/EvaluateMe" docBase="EvaluateMe" reloadable="true">
-	<!-- COPS -->
+	<!-- EvaluateMe -->
 <!-- 	<Resource 
-		name="${context.db.cops.name}" 
-		auth="${context.db.cops.auth}" 
-        type="${context.db.cops.type}" 
-		username="${context.db.cops.username}" 
-		password="${context.db.cops.password}" 
-        driverClassName="${context.db.cops.driverClassName}" 
-		url="${context.db.cops.url}" 
-        maxActive="${context.db.cops.maxActive}" 
-		maxIdle="${context.db.cops.maxIdle}" 
-		removeAbandoned="${context.db.cops.removeAbandoned}" 
-		removeAbandonedTimeout="${context.db.cops.removeAbandonedTimeout}" 
-		logAbandoned="${context.db.cops.logAbandoned}" 
+		name="${context.db.evaluateme.name}" 
+		auth="${context.db.evaluateme.auth}" 
+        type="${context.db.evaluateme.type}" 
+		username="${context.db.evaluateme.username}" 
+		password="${context.db.evaluateme.password}" 
+        driverClassName="${context.db.evaluateme.driverClassName}" 
+		url="${context.db.evaluateme.url}" 
+        maxActive="${context.db.evaluateme.maxActive}" 
+		maxIdle="${context.db.evaluateme.maxIdle}" 
+		removeAbandoned="${context.db.evaluateme.removeAbandoned}" 
+		removeAbandonedTimeout="${context.db.evaluateme.removeAbandonedTimeout}" 
+		logAbandoned="${context.db.evaluateme.logAbandoned}" 
 	/> -->
 </Context>

@@ -9,7 +9,7 @@
 	
 	<decorator name="sitemesh" page="home.jsp">
 		<pattern>*admin*</pattern>
-		<pattern>*customer*</pattern>
 		<pattern>*questions*</pattern>
+		<pattern>*user*</pattern>
 	</decorator>
 </decorators>

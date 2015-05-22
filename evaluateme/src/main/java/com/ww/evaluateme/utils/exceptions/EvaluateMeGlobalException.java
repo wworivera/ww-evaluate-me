@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ww.evaluateme.models.ErrorCodes;
 
-public class PymesGlobalException extends RuntimeException
+public class EvaluateMeGlobalException extends RuntimeException
 {
 	private static final long serialVersionUID = -5430182206137994785L;
 
@@ -17,7 +17,7 @@ public class PymesGlobalException extends RuntimeException
 		this.errorCodes = errorCodes;
 	}
 	
-	public PymesGlobalException(List<ErrorCodes> errorCodes)
+	public EvaluateMeGlobalException(List<ErrorCodes> errorCodes)
 	{
 		this.errorCodes = errorCodes;
 	}

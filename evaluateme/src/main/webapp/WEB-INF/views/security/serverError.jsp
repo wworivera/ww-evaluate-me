@@ -20,7 +20,7 @@
 		<link href="${context}/resources/css/pace/pace-corner-red.css" rel="stylesheet">
 		<link href="${context}/resources/css/global.css" rel="stylesheet">
 		<link href="${context}/resources/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet">
-	    <title>Customer Identity Validation System</title>
+	    <title>Evaluate.Me</title>
 	</head>
 	<body>
 		<t:header/>
